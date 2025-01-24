@@ -1,0 +1,23 @@
+name: Fortran Build
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: fortran-lang/setup-fortran@v1
+        id: setup-fortran
+        with:
+          compiler: intel-classic
+          version: 2024.1
+
+      - run: |
+          echo "Fortran compiler: ${{ env.FC }}"
+          echo "C compiler: ${{ env.CC }}"
+          echo "C++ compiler: ${{ env.CXX }}"
+          ${{ env.FC }} --version
+          ${{ steps.setup-fortran.outputs.fc }} --version
