@@ -23,9 +23,7 @@ jobs:
           echo "Fortran compiler: ${{ env.FC }}"
           echo "C compiler: ${{ env.CC }}"
           echo "C++ compiler: ${{ env.CXX }}"
-          ifort
-          ifx
-
+          
       - name: Run build script
         run: build.bat
         
