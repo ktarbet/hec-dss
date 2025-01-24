@@ -134,7 +134,7 @@
       <DataExecutionPrevention>
       </DataExecutionPrevention>
       <TargetMachine>MachineX64</TargetMachine>
-      <IgnoreSpecificDefaultLibraries>LIBCMTD;LIBCMT</IgnoreSpecificDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMTD;LIBCMT;libucrtd</IgnoreSpecificDefaultLibraries>
       <LinkStatus>
       </LinkStatus>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
