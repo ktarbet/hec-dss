@@ -25,5 +25,5 @@ jobs:
           echo "C++ compiler: ${{ env.CXX }}"
           
       - name: Run build script
-        run: build.bat
+        run: .\build.bat
         
