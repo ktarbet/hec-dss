@@ -10,6 +10,9 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+    
       - uses: fortran-lang/setup-fortran@v1
         id: setup-fortran
         with:
@@ -20,5 +23,9 @@ jobs:
           echo "Fortran compiler: ${{ env.FC }}"
           echo "C compiler: ${{ env.CC }}"
           echo "C++ compiler: ${{ env.CXX }}"
-          ${{ env.FC }} --version
-          ${{ steps.setup-fortran.outputs.fc }} --version
+          ifort
+          ifx
+
+      - name: Run build script
+        run: build.bat
+        
