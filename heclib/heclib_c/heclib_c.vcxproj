@@ -640,6 +640,7 @@
       <Verbose>true</Verbose>
       <AdditionalDependencies>zlibstatic.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\..\lib\$(PlatformName)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libucrtd</IgnoreSpecificDefaultLibraries>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
